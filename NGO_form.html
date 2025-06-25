@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strisutram Foundation Volunteer Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f9f6;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2d6a4f;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 25px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    input[type="submit"] {
+      background-color: #40916c;
+      color: white;
+      font-weight: bold;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2d6a4f;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Strisutram Foundation - Volunteer Application Form</h2>
+  <form id="volunteerForm">
+    
+    <label for="name">Full Name*</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="age">Age*</label>
+    <input type="number" id="age" name="age" min="16" required>
+
+    <label for="gender">Gender*</label>
+    <select id="gender" name="gender" required>
+      <option value="">--Select--</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Non-binary</option>
+      <option>Prefer not to say</option>
+    </select>
+
+    <label for="address">Address*</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <label for="aadhar">Aadhar Number*</label>
+    <input type="text" id="aadhar" name="aadhar" pattern="\d{12}" title="Enter 12 digit Aadhar number" required>
+
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number*</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Enter 10 digit mobile number" required>
+
+    <label for="skills">Your Skills / Areas of Interest</label>
+    <textarea id="skills" name="skills" rows="2"></textarea>
+
+    <label for="availability">Weekly Availability (hours)</label>
+    <input type="number" id="availability" name="availability" min="1" max="40">
+
+    <label for="idproof">Upload ID Proof (PDF or JPG)</label>
+    <input type="file" id="idproof" name="idproof" accept=".pdf,.jpg,.jpeg,.png">
+
+    <input type="submit" value="Apply Now">
+
+  </form>
+
+  <script>
+    document.getElementById('volunteerForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Thank you for applying to volunteer with Strisutram Foundation!');
+    });
+  </script>
+
+</body>
+</html>
